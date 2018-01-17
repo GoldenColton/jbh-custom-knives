@@ -1,0 +1,53 @@
+ header, footer {
+ 	width: 100%;
+	background-color: $HeaderColor;
+	padding: 15px;
+	border: solid 5px $MainBorder;
+}
+.header {
+	background: $HeaderColor;
+	color: $LightestColor;
+	//Custom Background Image!
+	background-size: cover;
+	background-position: center center;
+	@include flexbox;
+	@include align-items($value: center);
+	@include justify-content($value: center);
+}
+
+.header-bar {
+
+
+	.custom-logo-link {
+		background: none;
+	}
+
+	h2 {
+		color: $DarkestColor;
+	}
+}
+
+.site-title {
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 20%;
+
+	& a {
+		color: $LightestColor;
+		background: none;
+		text-decoration: none;
+		padding: .5em;
+	}
+}
+
+
+// Current menu page
+.current_page_item {
+	// background: $MenuBtnHoverColor;
+
+	& a {
+	color: $LinkHoverColor;
+	// background: $MenuBtnHoverColor;
+	}
+}

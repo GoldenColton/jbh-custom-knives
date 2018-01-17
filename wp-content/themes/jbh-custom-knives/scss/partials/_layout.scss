@@ -1,0 +1,24 @@
+.header-bar {
+	width: 80%;
+	@include flexbox;
+	@include align-items($value: center);
+	@include justify-content($value: center);
+
+	h2 {
+		position: relative;
+		top: -20px;
+		left: 1em;
+	}
+
+	.main-nav-contain {
+		width: 50%;
+
+		.main-menu {
+			@include flexbox;
+			@include align-items($value: center);
+			@include justify-content($value: space-around);
+			width: 100%;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+//This file affects the user-facing side and the editor-style in the admin panel
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:200,400,500,600,700,800|Bungee');
+
+/* Font Role Mixins */
+
+@mixin toplevel_header(){
+	font-family: 'Barlow', 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+	color: $DarkGrey;
+}
+@mixin sub_header(){
+	font-family: 'Barlow', 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.5em;
+	color: $Oregon;
+}
+@mixin body_text(){
+	font-family: 'Barlow', 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: $DarkGrey;
+}
+@mixin link_text(){
+	font-family: 'Barlow', 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 1em;
+	color: $Bark;
+}
+@mixin main_menu_text(){
+	font-family: 'Barlow', 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	color: $MainMenuItemColor;
+}
+
+
+body {
+	font-family: 'Roboto', Calibri, Arial, sans-serif;
+	line-height: 1.4;
+}
