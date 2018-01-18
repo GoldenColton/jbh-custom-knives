@@ -1,6 +1,6 @@
 <aside class="sidebar" >
 	<section class="widget" >
-		<h3>Filter My Portfolio : </h3>
+		<h3>Filter Knives : </h3>
 		<ul>
 			<?php 
 			//display all termss

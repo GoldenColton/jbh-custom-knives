@@ -64,7 +64,7 @@
 
 	  </section>
 	<?php else: ?>
-		No Portfolio Pieces to show
+		No Knives to show
 	<?php endif; 
 	//clean up after you're done querying!
 	wp_reset_postdata();

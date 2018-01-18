@@ -1,32 +1,32 @@
 <?php 
 /*
-Plugin Name: MMC Portfolio CPT
+Plugin Name: CMW CustomPostTypes - Knife Gallery
 Description: Creates the "Portfolio" Custom Post Type, so we can add portfolio pieces
-Author: Melissa Cabral
+Author: Colton Wood
 Version: 0.1
 License: GPLv3
 */
 
-add_action( 'init', 'mmc_register_stuff' );
-function mmc_register_stuff(){
-	register_post_type( 'portfolio_piece', array(
+add_action( 'init', 'cmw_register_knife' );
+function cmw_register_knife(){
+	register_post_type( 'knife', array(
 		'public' 		=> true,
 		'has_archive' 	=> true,
-		'label' 		=> 'Portfolio',
+		'label' 		=> 'Knives',
 		'menu_icon'		=> 'dashicons-format-gallery',
 		'menu_position'	=> 5,
 		'labels'		=> array(
-				'add_new_item' 	=> 'Add New Portfolio Piece',
-				'not_found' 	=> 'No Portfolio Pieces Found',
+				'add_new_item' 	=> 'Add New Knife',
+				'not_found' 	=> 'No Knives Found',
 			),
 		//for better looking URLs, like site.com/portfolio
-		'rewrite'		=> array( 'slug' => 'portfolio' ),
+		'rewrite'		=> array( 'slug' => 'knives' ),
 		'supports'		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions',
 								 'custom-fields' ),
 	) );
 
 	//add the "type of work" taxonomy to the portfolio
-	register_taxonomy( 'type_of_work', 'portfolio_piece', array(
+	register_taxonomy( 'type_of_work', 'knife', array(
 		'label' 			=> 'Work Types',
 		'show_admin_column' => true,
 		'hierarchical' 		=> true,
@@ -38,9 +38,9 @@ function mmc_register_stuff(){
 	) );
 }
 
-function mmc_cpt_flush(){
-	mmc_register_stuff();
+function cmw_cpt_flush(){
+	cmw_register_knife();
 	flush_rewrite_rules();
 }
 //run the function when this plugin activates
-register_activation_hook( __FILE__, 'mmc_cpt_flush' );
+register_activation_hook( __FILE__, 'cmw_cpt_flush' );

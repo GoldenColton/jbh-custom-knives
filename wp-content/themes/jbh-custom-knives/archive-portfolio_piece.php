@@ -2,7 +2,7 @@
 
 <main class="content">
 
-	<h1 class="page-title" >My Work : </h1>
+	<h1 class="page-title" >Knives</h1>
 
 	<?php //The Loop Begins here
 	if( have_posts() ):
